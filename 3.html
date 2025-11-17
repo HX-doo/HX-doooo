@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 - 于利惠</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #111; background: #fff; line-height: 1.6; }
+        .container { width: 90%; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        
+        /* 导航栏 */
+        nav {
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #fff;
+            z-index: 999;
+        }
+        .logo { font-size: 24px; font-weight: 600; text-decoration: none; color: #111; }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a {
+            text-decoration: none;
+            color: #111;
+            font-weight: 400;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #c4a87d; }
+        
+        /* 关于区 */
+        .about-section { padding: 200px 0 100px; }
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: #c4a87d;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .about-text p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        /* 技能区 */
+        .skills { margin-top: 50px; }
+        .skills h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 15px; }
+        .skill-item {
+            padding: 8px 18px;
+            background: #f5f5f5;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .skill-item:hover {
+            background: #c4a87d;
+            color: #fff;
+        }
+        
+        /* 经历区 */
+        .experience { margin-top: 100px; }
+        .exp-item {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        .exp-item:last-child { border-bottom: none; }
+        .exp-year {
+            font-size: 14px;
+            color: #c4a87d;
+            margin-bottom: 5px;
+        }
+        .exp-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .exp-desc { color: #666; }
+        
+        /* 滚动渐显 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.active { opacity: 1; transform: translateY(0); }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav-links { gap: 20px; }
+            .about-section { padding: 150px 0 80px; }
+            .section-title { font-size: 36px; margin-bottom: 40px; }
+            .about-content { grid-template-columns: 1fr; gap: 40px; }
+            .about-img { height: 400px; }
+            .about-text h3 { font-size: 24px; }
+            .about-text p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="container">
+        <a href="index.html" class="logo">于利惠</a>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="work.html">作品</a>
+            <a href="about.html" class="active">关于</a>
+            <a href="service.html">服务</a>
+            <a href="contact.html">联系</a>
+        </div>
+    </nav>
+
+    <section class="about-section container">
+        <h2 class="section-title fade-in">关于我</h2>
+        
+        <div class="about-content">
+            <div class="about-img-container fade-in">
+                <img src="https://picsum.photos/id/64/800/1000" alt="于利惠肖像" class="about-img">
+            </div>
+            
+            <div class="about-text fade-in">
+                <h3>用设计传递价值的创作者</h3>
+                <p>我是于利惠，一名拥有8年经验的视觉设计师，专注于品牌视觉设计、UI/UX设计与视觉创意领域。毕业于中央美术学院视觉传达专业，曾任职于多家知名设计工作室，服务过30+国内外品牌。</p>
+                <p>我的设计理念是"少即是多"，坚信好的设计应该简洁有力，既能解决实际问题，又能传递情感价值。我擅长从品牌内核出发，通过视觉语言构建独特的品牌气质。</p>
+                <p>除了商业设计，我也热爱探索实验性设计，作品曾入选2023年国际平面设计双年展。</p>
+                
+                <div class="skills">
+                    <h4>专业技能</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">品牌视觉设计</div>
+                        <div class="skill-item">UI/UX设计</div>
+                        <div class="skill-item">包装设计</div>
+                        <div class="skill-item">插画创作</div>
+                        <div class="skill-item">印刷工艺</div>
+                        <div class="skill-item">3D视觉</div>
+                        <div class="skill-item">Figma</div>
+                        <div class="skill-item">Adobe Creative Suite</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="experience fade-in">
+            <h3 class="section-title">职业经历</h3>
+            
+            <div class="exp-item">
+                <div class="exp-year">2020 - 至今</div>
+                <div class="exp-title">独立设计师</div>
+                <div class="exp-desc">专注为中小品牌提供全案设计服务，涵盖品牌建立、视觉升级与落地执行，服务客户包括餐饮、美妆、文化类品牌。</div>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-year">2016 - 2020</div>
+                <div class="exp-title">资深设计师 @ 造形设计工作室</div>
+                <div class="exp-desc">负责头部客户的品牌视觉系统设计，主导3个百万级品牌升级项目，带领5人设计团队完成项目执行。</div>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-year">2014 - 2016</div>
+                <div class="exp-title">设计师 @ 方片视觉</div>
+                <div class="exp-desc">参与品牌视觉与包装设计项目，积累快消品、文创类品牌服务经验，完成20+项目的视觉落地。</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
